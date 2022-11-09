@@ -1,0 +1,36 @@
+.container {
+	width: 560px;
+	min-height: 300px;
+	max-height: 460px;
+	overflow-y: auto;
+	padding: 10px 5px;
+}
+
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+	color: black;
+}
+
+table th {
+	padding: 8px 25px;
+}
+
+table td {
+	padding: 8px 25px;
+	width: 15%;
+}
+
+tbody tr:hover {
+	background: #f5fafe;
+}
+
+.add {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.saveBtn {
+	padding: 10px 5px;
+}
