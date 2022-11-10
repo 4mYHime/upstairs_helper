@@ -3,6 +3,10 @@
 	"name": "stock helper",
 	"version": "1.0",
 	"description": "a simple info of stock",
+	"background": {
+		"persistent": false,
+		"scripts": ["js/background.js"]
+	 },
 	"icons": {
         "16": "images/icon16.png",
         "48": "images/icon48.png",
@@ -16,7 +20,14 @@
 		"default_title": "stock helper",
 		"default_popup": "popup.html"
 	},
+	"offline_enabled": true,
 	"permissions": [
-        "https://core-api-prod.upstairs.io/orders*"
+        "https://core-api-prod.upstairs.io/orders*",
+		"notifications",
+		"storage",
+		"unlimitedStorage",
+		"alarms",
+		"background",
+		"idle"
     ]
 }
