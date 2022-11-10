@@ -168,15 +168,15 @@ document.getElementById('addBtn').onclick = function() {
 // initial localStorage
 httpRequest(showResult);
 
-// // initial tasks, 1 times per min
-// interval_id = setInterval(function(){alert("xxx")}, 6000);
-// var nft_interval_ids = localStorage.nft_interval_ids || [];
-// if (nft_interval_ids.length) {
-// 	nft_interval_ids = JSON.parse(nft_interval_ids)
-// 	nft_interval_ids.push(interval_id)
-// }
-// else {
-// 	nft_interval_ids = [interval_id]
-// }
-// localStorage.nft_interval_ids = JSON.stringify(nft_interval_ids);
+// initial tasks, 1 times per min
+interval_id = setInterval(function(){httpRequest(showResult)}, 6000);
+var nft_interval_ids = localStorage.nft_interval_ids || [];
+if (nft_interval_ids.length) {
+	nft_interval_ids = JSON.parse(nft_interval_ids)
+	nft_interval_ids.push(interval_id)
+}
+else {
+	nft_interval_ids = [interval_id]
+}
+localStorage.nft_interval_ids = JSON.stringify(nft_interval_ids);
 
